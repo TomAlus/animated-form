@@ -41,6 +41,11 @@ body {
 
 .container form .form__step {
   width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.container form .form__step.slidepage {
+  margin-left: 0;
 }
 
 .container form .form__step .title {
@@ -96,12 +101,12 @@ body {
   margin-top: -20px !important;
 }
 
-form .form-group__buttons button .prev {
+form .form-group__buttons button.prev {
   margin-right: 3px;
   font-size: 17px;
 }
 
-form .form-group__buttons button .next {
+form .form-group__buttons button.next {
   margin-left: 3px;
 }
 
@@ -129,6 +134,11 @@ form .form-group select {
   font-weight: 500;
   color: #000;
   margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.progress-bar .step.active p {
+  color: #d43f8d;
 }
 
 .progress-bar .step .bullet {
@@ -138,6 +148,12 @@ form .form-group select {
   border: 2px solid #000;
   display: inline-block;
   border-radius: 50%;
+  transition: 0.2s;
+}
+
+.progress-bar .step.active .bullet {
+  border-color: #d43f8d;
+  background: #d43f8d;
 }
 
 .progress-bar .step .bullet::before,
@@ -156,7 +172,7 @@ form .form-group select {
   display: none;
 }
 
-.progress-bar .step .bullet::after {
+.progress-bar .step.active .bullet::after {
   background: #d43f8d;
   transform: scaleX(0);
   transform-origin: left;
@@ -179,6 +195,10 @@ form .form-group select {
   line-height: 22px;
 }
 
+.progress-bar .step.active span {
+  display: none;
+}
+
 .progress-bar .step .check {
   display: none;
   position: absolute;
@@ -186,4 +206,9 @@ form .form-group select {
   top: 70%;
   font-size: 15px;
   transform: translate(-50%, -50%);
+}
+
+.progress-bar .step.active .check {
+  display: block;
+  color: #fff;
 }

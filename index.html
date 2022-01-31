@@ -50,7 +50,7 @@
       <div class="form">
         <form action="#">
           <!-- Step One -->
-          <div class="form__step">
+          <div class="form__step slidepage">
             <div class="title">Basic Info:</div>
             <div class="form-group">
               <label for="firstname">First Name</label>
@@ -61,7 +61,7 @@
               <input type="text" name="lastname" id="lastname" />
             </div>
             <div class="form-group">
-              <button>Next</button>
+              <button class="next">Next</button>
             </div>
           </div>
 
@@ -76,7 +76,7 @@
               <label for="phone">Phone Number</label>
               <input type="number" name="phone" id="phone" />
             </div>
-            <div class="form-group">
+            <div class="form-group form-group__buttons">
               <button class="prev-1 prev">Previous</button>
               <button class="next-1 next">Next</button>
             </div>
@@ -115,13 +115,15 @@
               <label for="password">Password</label>
               <input type="password" name="password" id="password" />
             </div>
-            <div class="form-group">
+            <div class="form-group form-group__buttons">
               <button class="prev-3 prev">Previous</button>
-              <button type="submit" class="next-3 next">Submit</button>
+              <button type="submit" class="submit">Submit</button>
             </div>
           </div>
         </form>
       </div>
     </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
