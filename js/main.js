@@ -16,15 +16,18 @@ class App {
   }
 
   addEventListeners() {
-    this.$nextBtn.forEach((btn) =>
-      btn.addEventListener("click", this.handleNextBtnClick)
-    );
+    this.$nextBtn.forEach((btn) => {
+      btn.addEventListener("click", this.handleNextBtnClick);
+      btn.addEventListener("touchstart", this.handleNextBtnClick);
+    });
 
-    this.$prevBtn.forEach((btn) =>
-      btn.addEventListener("click", this.handlePrevBtnClick)
-    );
+    this.$prevBtn.forEach((btn) => {
+      btn.addEventListener("click", this.handlePrevBtnClick);
+      btn.addEventListener("touchstart", this.handlePrevBtnClick);
+    });
 
     this.$submitButton.addEventListener("click", this.handleSubmitForm);
+    this.$submitButton.addEventListener("touchstart", this.handleSubmitForm);
   }
 
   handleNextBtnClick = (e) => {
